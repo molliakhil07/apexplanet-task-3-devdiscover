@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="DevDiscover helps you test your web development knowledge and discover developer articles."
+  />
+  <title>DevDiscover | Learn. Test. Discover.</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="logo" href="#home" aria-label="DevDiscover home">
+        Dev<span>Discover</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#discover">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">YOUR WEB DEVELOPMENT JOURNEY</p>
+        <h1>Learn. Test. <span>Discover.</span></h1>
+        <p class="hero-description">
+          Challenge your web development knowledge, improve your skills,
+          and discover articles from the developer community.
+        </p>
+
+        <a class="primary-button" href="#quiz">Start the Quiz</a>
+      </div>
+    </section>
+
+    <section class="quiz-section container" id="quiz">
+      <div class="section-heading">
+        <p class="eyebrow">TEST YOUR KNOWLEDGE</p>
+        <h2>Web Development Quiz</h2>
+        <p>Answer the questions and see how much you know.</p>
+      </div>
+
+      <div class="quiz-card">
+        <div class="quiz-info">
+          <span id="question-counter">Question 1 of 5</span>
+          <span id="score-display">Score: 0</span>
+        </div>
+
+        <div
+          class="progress-track"
+          role="progressbar"
+          aria-label="Quiz progress"
+          aria-valuemin="0"
+          aria-valuemax="5"
+          aria-valuenow="0"
+          id="quiz-progress"
+        >
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+
+        <h3 id="question-text">Your question will appear here.</h3>
+
+        <div
+          class="answer-options"
+          id="answer-options"
+          aria-label="Answer choices"
+        >
+          <!-- JavaScript will add answer buttons here. -->
+        </div>
+
+        <p
+          id="quiz-feedback"
+          role="status"
+          aria-live="polite"
+        ></p>
+
+        <div class="quiz-actions">
+          <button class="primary-button" id="next-button" type="button" disabled>
+            Next Question
+          </button>
+        </div>
+
+        <div id="quiz-result" hidden>
+          <h3>Quiz completed!</h3>
+          <p id="final-score"></p>
+          <button class="primary-button" id="restart-button" type="button">
+            Try Again
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="discover-section container" id="discover">
+      <div class="section-heading">
+        <p class="eyebrow">KEEP EXPLORING</p>
+        <h2>Discover Developer Articles</h2>
+        <p>Explore articles fetched from the DEV Community API.</p>
+      </div>
+
+      <div id="article-status" role="status" aria-live="polite">
+        Developer articles will appear here.
+      </div>
+
+      <div class="article-grid" id="article-grid">
+        <!-- JavaScript will add article cards here. -->
+      </div>
+
+      <button class="secondary-button" id="load-articles-button" type="button">
+        Load Articles
+      </button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        &copy; <span id="current-year">2026</span> DevDiscover.
+        Built with HTML, CSS and JavaScript.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
